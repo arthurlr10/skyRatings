@@ -4,7 +4,9 @@ import GlobalContainer from "@components/globalContainer";
 
 const Home: React.FC = () => {
   return (
-    <GlobalContainer/>
+    <GlobalContainer>
+      
+    </GlobalContainer>
   );
 };
 
