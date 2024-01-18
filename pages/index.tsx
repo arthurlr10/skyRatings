@@ -1,17 +1,10 @@
 import React from "react";
 
-import { Cards, Footer, Header, Main } from "@components";
+import GlobalContainer from "@components/globalContainer";
 
 const Home: React.FC = () => {
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-    >
-      <Header />
-      <Main />
-      <Cards />
-      <Footer />
-    </div>
+    <GlobalContainer/>
   );
 };
 
