@@ -1,15 +1,23 @@
 import React from "react";
-import { ConfigProvider, Layout, Menu } from "antd";
+import { ConfigProvider, Layout, Menu, Typography } from "antd";
 
 const { Header, Content, Footer, Sider } = Layout;
+const { Text } = Typography;
+
 
 const customTheme = {
     token: {
         colorPrimary: "#7EC2F9",
-        headerBg: "#DCDCDC",
         colorText: "#000000",
-        fontFamilyCode: "Liberation Mono"
     },
+    components: {
+        Menu: {
+            activeBarHeight: 0
+        },
+        Layout: {
+            headerBg: "transparent",
+        },
+      },
 };
 
 const items = [
@@ -17,26 +25,19 @@ const items = [
     { key: "companies", label: "Companies" },
     { key: "airports", label: "Airports" },
     { key: "about", label: "About" },
-    // Ajoutez plus d'éléments ici
-];
+]
 
 const GlobalContainer: React.FC = ({ children }) => {
     return (
         <ConfigProvider theme={customTheme}>
             <Layout>
-                <Header style={{ display: "flex", alignItems: "center", padding: "0" }}>
-                    <div>
-                        <h1 style={{ padding: "0 15px 0px 15px", backgroundColor: customTheme.token.headerBg }}>SkyRatings</h1>
-                    </div>
+                <Header style={{ display: "flex" }}>
+                    <Text style={{ color: "#7EC2F9", fontSize: "36px", flexShrink: 0 }}>SkyRatings</Text>
                     <Menu
                         mode="horizontal"
-                        defaultSelectedKeys={["1"]}
+                        defaultSelectedKeys={["flights"]}
                         items={items}
-                        style={{
-                            flex: 1,
-                            display: "flex",
-                            justifyContent: "space-around",
-                        }}
+                        style={{ width: "100%", backgroundColor: "transparent", borderBottom: "none" }}
                     />
                 </Header>
                 <Content style={{ margin: "0 16px", minHeight: "100vh" }}>{children}</Content>
