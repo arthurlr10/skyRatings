@@ -18,21 +18,7 @@ const customTheme = {
     },
 };
 
-const items = [
-    { key: "flights", label: "Flights" },
-    { key: "companies", label: "Companies" },
-    { key: "airports", label: "Airports" },
-    { key: "about", label: "About" },
-];
-
-const Homepage: React.FC = () => {
-    const router = useRouter();
-
-    const handleMenuClick = (e: any) => {
-        console.log(e);
-        //router.push(`/${e.key}`);
-    };
-
+const Hero: React.FC = () => {
     return (
         <div className={"hero"}>
             <div className={"hero--left"}>
@@ -63,9 +49,8 @@ const Homepage: React.FC = () => {
                     alt="Cloud 2"
                 />
             </div>
-
         </div>
     );
 };
 
-export default Homepage;
+export default Hero;

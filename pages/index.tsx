@@ -1,12 +1,12 @@
 import React from "react";
 
 import GlobalContainer from "@components/globalContainer";
-import Homepage from "@components/homepage";
+import Hero from "@components/hero";
 
 const Home: React.FC = () => {
     return (
         <GlobalContainer>
-            <Homepage />
+            <Hero />
         </GlobalContainer>
     );
 };
