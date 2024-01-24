@@ -51,6 +51,7 @@ const GlobalContainer: React.FC = ({ children }) => {
                             fontSize: "36px",
                             fontWeight: "600",
                             flexShrink: 0,
+                            paddingLeft: "75px",
                         }}
                     >
                         SkyRatings
