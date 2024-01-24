@@ -1,5 +1,6 @@
 import React from "react";
 import { ConfigProvider, Layout, Menu, Typography } from "antd";
+import { useRouter } from "next/router";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Text } = Typography;
@@ -28,6 +29,12 @@ const items = [
 ]
 
 const GlobalContainer: React.FC = ({ children }) => {
+    const router = useRouter();
+
+    const handleMenuClick = (e: any) => {
+        router.push(`/${e.key}`);
+    };
+
     return (
         <ConfigProvider theme={customTheme}>
             <Layout>
@@ -37,6 +44,7 @@ const GlobalContainer: React.FC = ({ children }) => {
                         mode="horizontal"
                         defaultSelectedKeys={["flights"]}
                         items={items}
+                        onClick={handleMenuClick}
                         style={{ width: "100%", backgroundColor: "transparent", borderBottom: "none" }}
                     />
                 </Header>
