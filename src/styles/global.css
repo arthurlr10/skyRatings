@@ -20,7 +20,7 @@ body {
 }
 
 .hero--left {
-  margin-top: -50px;
+  margin-top: -100px;
   max-width: 50%;
   min-width: 700px;
 }
@@ -75,4 +75,14 @@ body {
 .hero--cloud2 {
   bottom: 0;
   right: 450px;
+}
+
+@media(max-width: 900px){
+  .hero {
+    margin: 10px;
+  }
+
+  .hero--cloud1, .hero--cloud2 {
+    display: none;
+  }
 }
