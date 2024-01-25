@@ -1,8 +1,9 @@
 import React from "react";
 import { ConfigProvider, Layout, Menu, Typography } from "antd";
 import { useRouter } from "next/router";
+import Footer from "@components/footer";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 const { Text } = Typography;
 
 const customTheme = {
@@ -86,10 +87,7 @@ const GlobalContainer: React.FC = ({ children }) => {
                 <Content style={{ margin: "0 16px", minHeight: "100vh" }}>
                     {children}
                 </Content>
-                <Footer style={{ textAlign: "center" }}>
-                    SkyRatings © 2024 Created by Arthur LORY, BERTIN Alexis,
-                    YVENOU Pierre, HUCHEDE Simon
-                </Footer>
+                <Footer/>
             </Layout>
         </ConfigProvider>
     );
