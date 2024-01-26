@@ -33,7 +33,7 @@ const GlobalContainer: React.FC = ({ children }) => {
 
     const handleMenuClick = (e: any) => {
         console.log(e);
-        //router.push(`/${e.key}`);
+        router.push(`/${e.key}`);
     };
 
     return (
