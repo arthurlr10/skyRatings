@@ -21,7 +21,7 @@ export default async function handler(
       const [airlines] = await connection.query(`
       SELECT airline,
              (SUM(CASE WHEN flightStatusPublic = "ON_TIME" THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS onTimePercentage
-      FROM test
+      FROM flightStatus1
       GROUP BY airline
       ORDER BY onTimePercentage DESC;
   `);
